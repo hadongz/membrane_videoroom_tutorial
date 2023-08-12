@@ -15,14 +15,14 @@ defmodule VideoRoom.MixProject do
   def application do
     [
       mod: {VideoRoom.Application, []},
-      extra_applications: [:logger]
+      extra_applications: [:logger, :inets]
     ]
   end
 
   defp deps do
     [
-      {:membrane_rtc_engine, "~> 0.7.0"},
-      {:membrane_webrtc_plugin, "~> 0.9.0"},
+      {:membrane_rtc_engine, "~> 0.15.0"},
+      {:membrane_webrtc_plugin, "~> 0.15.0"},
       {:plug_cowboy, "~> 2.0"},
       {:phoenix, "~> 1.6"},
       {:phoenix_html, "~> 3.0"},
